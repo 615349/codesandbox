@@ -1,21 +1,18 @@
 const debounce = (fn, wait) => {
   let timer;
+  // must return function to utilise arguments
   return function() {
-    console.log("timer:", timer);
     clearTimeout(timer);
     timer = setTimeout(() => fn.apply(this, arguments), wait);
   };
 };
 
 function sayHello() {
-  console.log("My name is", this.name, new Date().toLocaleTimeString());
+  console.log("time is", new Date().toLocaleTimeString());
 }
 
-const person = {
-  name: "john",
-  speak: debounce(sayHello, 5000)
-};
+const speak = debounce(sayHello, 3000)
 
-person.speak();
-person.speak();
+speak();
+speak();
 
