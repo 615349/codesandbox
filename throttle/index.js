@@ -14,14 +14,11 @@ function throttled(fn, delay) {
 }
 
 function sayHello() {
-  console.log("My name is", this.name, new Date().toLocaleTimeString());
+  console.log("My name is: ", new Date().toLocaleTimeString());
 }
 
-const person = {
-  name: "john",
-  speak: throttled(sayHello, 5000)
-};
+const speak = throttled(sayHello, 5000)
 
-person.speak();
-person.speak();
+speak();
+speak();
 
