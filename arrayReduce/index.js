@@ -1,4 +1,4 @@
-/* the requirement is to calculation 
+/* the requirement is to calculation
  * the total population except China
  */
 

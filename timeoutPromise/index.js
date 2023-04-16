@@ -12,7 +12,6 @@ const fetchCard = () =>
     })
     .catch(error => {
       console.log("catch:", error);
-      throw error;
     });
 
 fetchCard();
